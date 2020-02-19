@@ -12,7 +12,7 @@ class ResultViewController: UITableViewController {
     
     let dateFormatter: DateFormatter = {
         let df = DateFormatter()
-        df.dateStyle = .short
+        df.dateFormat = "dd-MM-yyyy HH:mm"
         return df
     }()
     
