@@ -42,16 +42,26 @@
                                     <segue destination="Wv5-fQ-Mvk" kind="showDetail" id="LpJ-xu-is2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRa-ls-4Bg">
+                                <rect key="frame" x="162" y="795" width="90" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="lKu-y2-oLH" kind="show" id="gdB-sy-T7R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ezs-Ua-WjE" firstAttribute="top" secondItem="SLW-Kh-AXh" secondAttribute="bottom" constant="-184" id="4hz-Tc-bfe"/>
                             <constraint firstAttribute="bottom" secondItem="SLW-Kh-AXh" secondAttribute="bottom" id="5RD-rU-Mbt"/>
+                            <constraint firstItem="MRa-ls-4Bg" firstAttribute="top" secondItem="SLW-Kh-AXh" secondAttribute="bottom" constant="-101" id="6ab-wW-IYF"/>
                             <constraint firstItem="SLW-Kh-AXh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Hzu-5Y-xpU"/>
                             <constraint firstItem="SLW-Kh-AXh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KRp-iW-rck"/>
                             <constraint firstItem="SLW-Kh-AXh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Mjo-zz-VCF"/>
                             <constraint firstItem="axX-r3-idK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O19-nH-579"/>
                             <constraint firstItem="Ezs-Ua-WjE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="US8-wj-avD"/>
+                            <constraint firstItem="MRa-ls-4Bg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jbW-AQ-HUF"/>
                             <constraint firstItem="SLW-Kh-AXh" firstAttribute="top" secondItem="axX-r3-idK" secondAttribute="bottom" constant="-180" id="nGq-Yu-IfM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -63,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="89.855072463768124" y="60.9375"/>
+            <point key="canvasLocation" x="45" y="-273"/>
         </scene>
         <!--Results-->
         <scene sceneID="pOj-1f-hwd">
@@ -74,7 +84,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="xYE-4Y-X5Y">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="identifier" id="xYE-4Y-X5Y" customClass="ResultsCell" customModule="QuizGame" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xYE-4Y-X5Y" id="Hgw-7v-yR2">
@@ -100,6 +110,54 @@
                 <exit id="BwH-dA-YWd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1770" y="441"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="Gln-HB-DvY">
+            <objects>
+                <viewController id="lKu-y2-oLH" customClass="SettingsViewController" customModule="QuizGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cMR-pN-Cyi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uRs-Op-gUt">
+                                <rect key="frame" x="16" y="116" width="382" height="29"/>
+                                <segments>
+                                    <segment title="Consistently"/>
+                                    <segment title="Shuffle"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTi-gF-dfh">
+                                <rect key="frame" x="16" y="44" width="44" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="wsO-0K-sC9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="lcx-B5-esA" kind="unwind" unwindAction="unwindFromResult:" id="WEe-cZ-h3j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uRs-Op-gUt" firstAttribute="centerX" secondItem="cMR-pN-Cyi" secondAttribute="centerX" id="BfX-4W-zeM"/>
+                            <constraint firstItem="uRs-Op-gUt" firstAttribute="leading" secondItem="Qul-lQ-6sw" secondAttribute="leading" constant="16" id="JgL-La-RrR"/>
+                            <constraint firstItem="eTi-gF-dfh" firstAttribute="leading" secondItem="Qul-lQ-6sw" secondAttribute="leading" constant="16" id="LUz-bf-0xH"/>
+                            <constraint firstItem="Qul-lQ-6sw" firstAttribute="trailing" secondItem="uRs-Op-gUt" secondAttribute="trailing" constant="16" id="R3n-ia-OK6"/>
+                            <constraint firstItem="uRs-Op-gUt" firstAttribute="top" secondItem="Qul-lQ-6sw" secondAttribute="top" constant="72" id="RW2-n7-rnG"/>
+                            <constraint firstItem="eTi-gF-dfh" firstAttribute="top" secondItem="Qul-lQ-6sw" secondAttribute="top" id="SWW-1a-yOs"/>
+                            <constraint firstItem="Qul-lQ-6sw" firstAttribute="trailing" secondItem="eTi-gF-dfh" secondAttribute="trailing" constant="354" id="c22-QA-eYP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qul-lQ-6sw"/>
+                    </view>
+                    <connections>
+                        <outlet property="sequenceControl" destination="uRs-Op-gUt" id="tjm-He-0AQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w4A-p8-fBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="lcx-B5-esA" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="935" y="-948"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="Qs9-Le-3f1">

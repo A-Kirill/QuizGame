@@ -13,6 +13,7 @@ class Game {
     static let shared = Game()
     
     var gameSession: GameSession?
+    var difficulty: Strategy = .sequential
     
     private let recordsCaretaker = RecordsCaretaker()
     
@@ -40,4 +41,9 @@ class Game {
         self.records = []
     }
     
+}
+
+
+enum Strategy {
+    case sequential, shuffled
 }

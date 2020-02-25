@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		055C2E3023FD0F99007E459A /* ResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 055C2E2F23FD0F99007E459A /* ResultCell.xib */; };
 		055C2E3423FDA57E007E459A /* ResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055C2E3323FDA57E007E459A /* ResultsCell.swift */; };
+		055C2E362404EAC2007E459A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055C2E352404EAC2007E459A /* SettingsViewController.swift */; };
+		055C2E392404F1F4007E459A /* CreateQuestionsStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055C2E382404F1F4007E459A /* CreateQuestionsStrategy.swift */; };
+		055C2E3B2404F30B007E459A /* ShuffledQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055C2E3A2404F30B007E459A /* ShuffledQuestions.swift */; };
+		055C2E3D2404F433007E459A /* SequentialQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055C2E3C2404F433007E459A /* SequentialQuestions.swift */; };
 		05C706D023F99D4D00787E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C706CF23F99D4D00787E30 /* AppDelegate.swift */; };
 		05C706D223F99D4D00787E30 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C706D123F99D4D00787E30 /* MainViewController.swift */; };
 		05C706D523F99D4D00787E30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05C706D323F99D4D00787E30 /* Main.storyboard */; };
@@ -26,6 +30,10 @@
 /* Begin PBXFileReference section */
 		055C2E2F23FD0F99007E459A /* ResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultCell.xib; sourceTree = "<group>"; };
 		055C2E3323FDA57E007E459A /* ResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCell.swift; sourceTree = "<group>"; };
+		055C2E352404EAC2007E459A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		055C2E382404F1F4007E459A /* CreateQuestionsStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuestionsStrategy.swift; sourceTree = "<group>"; };
+		055C2E3A2404F30B007E459A /* ShuffledQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffledQuestions.swift; sourceTree = "<group>"; };
+		055C2E3C2404F433007E459A /* SequentialQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialQuestions.swift; sourceTree = "<group>"; };
 		05C706CC23F99D4D00787E30 /* QuizGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05C706CF23F99D4D00787E30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05C706D123F99D4D00787E30 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +70,16 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		055C2E372404F162007E459A /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				055C2E382404F1F4007E459A /* CreateQuestionsStrategy.swift */,
+				055C2E3A2404F30B007E459A /* ShuffledQuestions.swift */,
+				055C2E3C2404F433007E459A /* SequentialQuestions.swift */,
+			);
+			path = Strategy;
+			sourceTree = "<group>";
+		};
 		05C706C323F99D4D00787E30 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +99,7 @@
 		05C706CE23F99D4D00787E30 /* QuizGame */ = {
 			isa = PBXGroup;
 			children = (
+				055C2E372404F162007E459A /* Strategy */,
 				05D101E023FA60CA00BEFC32 /* Game.swift */,
 				05D101E223FA61E900BEFC32 /* GameSession.swift */,
 				05D101E623FA675D00BEFC32 /* RecordsCaretaker.swift */,
@@ -111,6 +130,7 @@
 				05C706D123F99D4D00787E30 /* MainViewController.swift */,
 				05D101DA23F9AE0900BEFC32 /* GameViewController.swift */,
 				05D101DE23FA5E8100BEFC32 /* ResultViewController.swift */,
+				055C2E352404EAC2007E459A /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,15 +207,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				055C2E3D2404F433007E459A /* SequentialQuestions.swift in Sources */,
 				05D101DF23FA5E8100BEFC32 /* ResultViewController.swift in Sources */,
 				05D101E723FA675D00BEFC32 /* RecordsCaretaker.swift in Sources */,
+				055C2E362404EAC2007E459A /* SettingsViewController.swift in Sources */,
 				05D101E123FA60CA00BEFC32 /* Game.swift in Sources */,
 				05D101DB23F9AE0900BEFC32 /* GameViewController.swift in Sources */,
 				055C2E3423FDA57E007E459A /* ResultsCell.swift in Sources */,
 				05D101D823F9A47900BEFC32 /* Question.swift in Sources */,
+				055C2E3B2404F30B007E459A /* ShuffledQuestions.swift in Sources */,
 				05D101E323FA61E900BEFC32 /* GameSession.swift in Sources */,
 				05C706D223F99D4D00787E30 /* MainViewController.swift in Sources */,
 				05D101E523FA647A00BEFC32 /* Record.swift in Sources */,
+				055C2E392404F1F4007E459A /* CreateQuestionsStrategy.swift in Sources */,
 				05C706D023F99D4D00787E30 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

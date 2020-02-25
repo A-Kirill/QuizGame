@@ -15,6 +15,8 @@ class GameViewController: UIViewController {
     var answerNumber = Int()
     var score = Int()
     var gameViewDelegate: GameViewDelegate?
+    var strategy = Game.shared.difficulty
+    
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet var buttonLabel: [UIButton]!
@@ -65,8 +67,23 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        chooseQuestionStrategy()
         pickQuestion()
     }
+    
+    
+    func chooseQuestionStrategy() {
+        var chosenStrategy: CreateQuestionsStrategy {
+            switch self.strategy {
+            case .sequential:
+                return SequentialQuestions()
+            case .shuffled:
+                return ShuffledQuestions()
+            }
+        }
+        questions = chosenStrategy.questionsSequence()
+    }
+    
     
     func pickQuestion() {
         if questions.count > 0 {
