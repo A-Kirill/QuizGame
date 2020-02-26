@@ -37,7 +37,7 @@
                                 <rect key="frame" x="167" y="712" width="80" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Results">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="Wv5-fQ-Mvk" kind="showDetail" id="LpJ-xu-is2"/>
@@ -51,6 +51,11 @@
                                     <segue destination="lKu-y2-oLH" kind="show" id="gdB-sy-T7R"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxV-pe-aLa">
+                                <rect key="frame" x="152" y="812" width="110" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Questions"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -58,8 +63,10 @@
                             <constraint firstAttribute="bottom" secondItem="SLW-Kh-AXh" secondAttribute="bottom" id="5RD-rU-Mbt"/>
                             <constraint firstItem="SLW-Kh-AXh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Hzu-5Y-xpU"/>
                             <constraint firstItem="SLW-Kh-AXh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KRp-iW-rck"/>
+                            <constraint firstItem="FxV-pe-aLa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LFf-Eu-vQl"/>
                             <constraint firstItem="SLW-Kh-AXh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Mjo-zz-VCF"/>
                             <constraint firstItem="axX-r3-idK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O19-nH-579"/>
+                            <constraint firstItem="FxV-pe-aLa" firstAttribute="top" secondItem="MRa-ls-4Bg" secondAttribute="bottom" constant="8" id="TnG-GY-9hE"/>
                             <constraint firstItem="Ezs-Ua-WjE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="US8-wj-avD"/>
                             <constraint firstItem="MRa-ls-4Bg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jbW-AQ-HUF"/>
                             <constraint firstItem="MRa-ls-4Bg" firstAttribute="top" secondItem="Ezs-Ua-WjE" secondAttribute="bottom" constant="8" id="n2v-ki-bhb"/>
