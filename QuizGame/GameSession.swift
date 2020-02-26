@@ -14,9 +14,9 @@ protocol GameViewDelegate {
 
 class GameSession {
     
-    var scoreResult: Int = 0
+    static var scoreResult = Observable<Int>(0)
     var questionsCount: Int = Question.setupQuestion().count
-    var percent: Int = 0
+    static var percent = Observable<Int>(0)
     var questions = Question.setupQuestion()
     
 }

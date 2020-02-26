@@ -13,11 +13,14 @@ class GameViewController: UIViewController {
     var questions = Question.setupQuestion()
     var questNumber = Int()
     var answerNumber = Int()
-    var score = Int()
+//    var score = Int()//was
     var gameViewDelegate: GameViewDelegate?
     var strategy = Game.shared.difficulty
+    var score = GameSession.scoreResult
+    var percent = GameSession.percent
     
-    
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var percentLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet var buttonLabel: [UIButton]!
 
@@ -25,7 +28,8 @@ class GameViewController: UIViewController {
     }
     @IBAction func button1(_ sender: UIButton) {
         if answerNumber == 1 {
-            score += 1
+            score.value += 1
+            percent.value = score.value * 10
             pickQuestion()
         } else {
             showResult()
@@ -33,7 +37,8 @@ class GameViewController: UIViewController {
     }
     @IBAction func button2(_ sender: UIButton) {
         if answerNumber == 2 {
-            score += 1
+            score.value += 1
+            percent.value = score.value * 10
             pickQuestion()
         } else {
             showResult()
@@ -41,7 +46,8 @@ class GameViewController: UIViewController {
     }
     @IBAction func button3(_ sender: UIButton) {
         if answerNumber == 3 {
-            score += 1
+            score.value += 1
+            percent.value = score.value * 10
             pickQuestion()
         } else {
             showResult()
@@ -49,7 +55,8 @@ class GameViewController: UIViewController {
     }
     @IBAction func button4(_ sender: UIButton) {
         if answerNumber == 4 {
-            score += 1
+            score.value += 1
+            percent.value = score.value * 10
             pickQuestion()
         } else {
             showResult()
@@ -69,8 +76,16 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         chooseQuestionStrategy()
         pickQuestion()
+        
+        score.addObserver(self, options: [.new, .initial]) { [weak self] (newValue, _) in
+            self?.scoreLabel.text = "Correct answer: \(newValue)"
+        }
+        percent.addObserver(self, options: [.new, .initial]) { [weak self] (newValue, _) in
+            self?.percentLabel.text = "\(newValue)% done"
+        }
     }
     
+    //MARK: - functions
     
     func chooseQuestionStrategy() {
         var chosenStrategy: CreateQuestionsStrategy {
@@ -103,17 +118,16 @@ class GameViewController: UIViewController {
     }
     
     func showResult() {
-        let alertController = UIAlertController(title: "Final result!", message: "You answered on \(score) questions", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Final result!", message: "You answered on \(score.value) questions", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "ОК", style: .cancel, handler: { (_) in
             self.navigationController?.popViewController(animated: true)
             self.dismiss(animated: true, completion: nil)
         }))
 
-  //      let percent = Int(round(Double(score * 100 / questions.count)))
-        let percent = score * 10
-        self.gameViewDelegate?.didEndGame(result: score, percent: percent)
+        percent.value = score.value * 10
+        self.gameViewDelegate?.didEndGame(result: score.value, percent: percent.value)
 
-        let record = Record(date: Date(), score: score, percent: percent)
+        let record = Record(date: Date(), score: score.value, percent: percent.value)
         Game.shared.addRecord(record)
     
         //Game.shared.clearRecords()

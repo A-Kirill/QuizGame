@@ -13,6 +13,7 @@
 		055C2E392404F1F4007E459A /* CreateQuestionsStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055C2E382404F1F4007E459A /* CreateQuestionsStrategy.swift */; };
 		055C2E3B2404F30B007E459A /* ShuffledQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055C2E3A2404F30B007E459A /* ShuffledQuestions.swift */; };
 		055C2E3D2404F433007E459A /* SequentialQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055C2E3C2404F433007E459A /* SequentialQuestions.swift */; };
+		055C2E4024063A2E007E459A /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055C2E3F24063A2E007E459A /* Observable.swift */; };
 		05C706D023F99D4D00787E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C706CF23F99D4D00787E30 /* AppDelegate.swift */; };
 		05C706D223F99D4D00787E30 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C706D123F99D4D00787E30 /* MainViewController.swift */; };
 		05C706D523F99D4D00787E30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05C706D323F99D4D00787E30 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		055C2E382404F1F4007E459A /* CreateQuestionsStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuestionsStrategy.swift; sourceTree = "<group>"; };
 		055C2E3A2404F30B007E459A /* ShuffledQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffledQuestions.swift; sourceTree = "<group>"; };
 		055C2E3C2404F433007E459A /* SequentialQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialQuestions.swift; sourceTree = "<group>"; };
+		055C2E3F24063A2E007E459A /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		05C706CC23F99D4D00787E30 /* QuizGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05C706CF23F99D4D00787E30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05C706D123F99D4D00787E30 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 			path = Strategy;
 			sourceTree = "<group>";
 		};
+		055C2E3E240639FD007E459A /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				055C2E3F24063A2E007E459A /* Observable.swift */,
+			);
+			path = Observer;
+			sourceTree = "<group>";
+		};
 		05C706C323F99D4D00787E30 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +109,7 @@
 		05C706CE23F99D4D00787E30 /* QuizGame */ = {
 			isa = PBXGroup;
 			children = (
+				055C2E3E240639FD007E459A /* Observer */,
 				055C2E372404F162007E459A /* Strategy */,
 				05D101E023FA60CA00BEFC32 /* Game.swift */,
 				05D101E223FA61E900BEFC32 /* GameSession.swift */,
@@ -208,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				055C2E3D2404F433007E459A /* SequentialQuestions.swift in Sources */,
+				055C2E4024063A2E007E459A /* Observable.swift in Sources */,
 				05D101DF23FA5E8100BEFC32 /* ResultViewController.swift in Sources */,
 				05D101E723FA675D00BEFC32 /* RecordsCaretaker.swift in Sources */,
 				055C2E362404EAC2007E459A /* SettingsViewController.swift in Sources */,
