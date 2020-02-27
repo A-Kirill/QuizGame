@@ -9,38 +9,41 @@
 import UIKit
 
 class NewQuestionTableViewController: UITableViewController {
+    
+    var questionsCaretaker: QuestionsCaretaker?
+    var sections = ["Question", "Answer A", "Answer B", "Answer C", "Answer D", "Correct answer"]
 
+
+    @IBAction func saveButton(_ sender: Any) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard))
+        tableView?.addGestureRecognizer(hideKeyboardGesture)
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return sections.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseQIdentifier", for: indexPath)
 
         return cell
     }
-    */
+
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections[section]
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -87,4 +90,8 @@ class NewQuestionTableViewController: UITableViewController {
     }
     */
 
+    
+    @objc func hideKeyboard() {
+        self.tableView?.endEditing(true)
+    }
 }

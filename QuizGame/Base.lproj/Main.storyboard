@@ -352,10 +352,10 @@
             </objects>
             <point key="canvasLocation" x="1770" y="1142"/>
         </scene>
-        <!--Table View Controller-->
+        <!--New Question Table View Controller-->
         <scene sceneID="Rsb-Bg-4RL">
             <objects>
-                <tableViewController id="bfD-fg-x80" sceneMemberID="viewController">
+                <tableViewController id="bfD-fg-x80" customClass="NewQuestionTableViewController" customModule="QuizGame" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RMA-be-meR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -365,17 +365,30 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem title="Your new question" id="Ezt-k9-Ftr">
-                                    <barButtonItem key="rightBarButtonItem" systemItem="save" id="pyu-YL-QYL"/>
+                                    <barButtonItem key="rightBarButtonItem" systemItem="save" id="pyu-YL-QYL">
+                                        <connections>
+                                            <action selector="saveButton:" destination="bfD-fg-x80" id="pPi-ST-kcM"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </navigationItem>
                             </items>
                         </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6hL-nm-yhe">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseQIdentifier" id="6hL-nm-yhe">
                                 <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6hL-nm-yhe" id="L9j-CD-t5E">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TIh-Q6-V3b">
+                                            <rect key="frame" x="20" y="6" width="374" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -387,7 +400,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UFA-MX-7sR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2558" y="1142"/>
+            <point key="canvasLocation" x="2557.971014492754" y="1141.7410714285713"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NOi-wl-Wyr">
