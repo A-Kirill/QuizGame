@@ -16,6 +16,7 @@ class Game {
     var difficulty: Strategy = .sequential
     
     private let recordsCaretaker = RecordsCaretaker()
+    private let questionsCaretaker = QuestionsCaretaker()//for questions
     
     private(set) var records: [Record] {
         didSet {
@@ -25,6 +26,7 @@ class Game {
     
     private init() {
         self.records = self.recordsCaretaker.retrieveRecords()
+        self.questions = self.questionsCaretaker.retrieveQuestions()//for questions
     }
     
     func addRecord(_ record: Record) {
@@ -39,6 +41,22 @@ class Game {
     
     func clearRecords() {
         self.records = []
+    }
+    
+
+    //for questions:
+    var questions: [Question] {
+        didSet {
+            questionsCaretaker.saveQuestion(questions: self.questions)
+        }
+    }
+    
+    func addQuestion(_ question: Question) {
+        self.questions.append(question)
+    }
+    
+    func addStartQuestions(_ qustions: [Question]) {
+        self.questions = Question.setupQuestion()
     }
     
 }

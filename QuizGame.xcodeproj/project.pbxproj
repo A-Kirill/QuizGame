@@ -27,6 +27,10 @@
 		05D101E323FA61E900BEFC32 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D101E223FA61E900BEFC32 /* GameSession.swift */; };
 		05D101E523FA647A00BEFC32 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D101E423FA647A00BEFC32 /* Record.swift */; };
 		05D101E723FA675D00BEFC32 /* RecordsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D101E623FA675D00BEFC32 /* RecordsCaretaker.swift */; };
+		05FE8D0A2406EF5D00057DDC /* QuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FE8D092406EF5D00057DDC /* QuestionsTableViewController.swift */; };
+		05FE8D0C240700CF00057DDC /* QuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05FE8D0B240700CF00057DDC /* QuestionCell.xib */; };
+		05FE8D0E240701B600057DDC /* QuestionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FE8D0D240701B600057DDC /* QuestionsCell.swift */; };
+		05FE8D1024078A3900057DDC /* NewQuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FE8D0F24078A3900057DDC /* NewQuestionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		05D101E223FA61E900BEFC32 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		05D101E423FA647A00BEFC32 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		05D101E623FA675D00BEFC32 /* RecordsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCaretaker.swift; sourceTree = "<group>"; };
+		05FE8D092406EF5D00057DDC /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewController.swift; sourceTree = "<group>"; };
+		05FE8D0B240700CF00057DDC /* QuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCell.xib; sourceTree = "<group>"; };
+		05FE8D0D240701B600057DDC /* QuestionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsCell.swift; sourceTree = "<group>"; };
+		05FE8D0F24078A3900057DDC /* NewQuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuestionTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,8 @@
 			children = (
 				055C2E2F23FD0F99007E459A /* ResultCell.xib */,
 				055C2E3323FDA57E007E459A /* ResultsCell.swift */,
+				05FE8D0B240700CF00057DDC /* QuestionCell.xib */,
+				05FE8D0D240701B600057DDC /* QuestionsCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -145,6 +155,8 @@
 				05D101DA23F9AE0900BEFC32 /* GameViewController.swift */,
 				05D101DE23FA5E8100BEFC32 /* ResultViewController.swift */,
 				055C2E352404EAC2007E459A /* SettingsViewController.swift */,
+				05FE8D092406EF5D00057DDC /* QuestionsTableViewController.swift */,
+				05FE8D0F24078A3900057DDC /* NewQuestionTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -209,6 +221,7 @@
 			files = (
 				05C706DA23F99D5100787E30 /* LaunchScreen.storyboard in Resources */,
 				05C706D723F99D5100787E30 /* Assets.xcassets in Resources */,
+				05FE8D0C240700CF00057DDC /* QuestionCell.xib in Resources */,
 				055C2E3023FD0F99007E459A /* ResultCell.xib in Resources */,
 				05C706D523F99D4D00787E30 /* Main.storyboard in Resources */,
 			);
@@ -228,11 +241,14 @@
 				05D101E723FA675D00BEFC32 /* RecordsCaretaker.swift in Sources */,
 				055C2E362404EAC2007E459A /* SettingsViewController.swift in Sources */,
 				05D101E123FA60CA00BEFC32 /* Game.swift in Sources */,
+				05FE8D0E240701B600057DDC /* QuestionsCell.swift in Sources */,
 				05D101DB23F9AE0900BEFC32 /* GameViewController.swift in Sources */,
 				055C2E3423FDA57E007E459A /* ResultsCell.swift in Sources */,
 				05D101D823F9A47900BEFC32 /* Question.swift in Sources */,
+				05FE8D1024078A3900057DDC /* NewQuestionTableViewController.swift in Sources */,
 				055C2E3B2404F30B007E459A /* ShuffledQuestions.swift in Sources */,
 				05D101E323FA61E900BEFC32 /* GameSession.swift in Sources */,
+				05FE8D0A2406EF5D00057DDC /* QuestionsTableViewController.swift in Sources */,
 				05C706D223F99D4D00787E30 /* MainViewController.swift in Sources */,
 				05D101E523FA647A00BEFC32 /* Record.swift in Sources */,
 				055C2E392404F1F4007E459A /* CreateQuestionsStrategy.swift in Sources */,
